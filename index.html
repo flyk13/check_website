@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Checker</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="file"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload File to Check URLs</h1>
+    <p>Select a CSV or Excel file containing URLs (one per line) to check their status.</p>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="fileInput">Choose file:</label>
+        <input type="file" id="fileInput" name="file" accept=".csv, .xlsx" required>
+        <button type="submit">Upload and Check URLs</button>
+    </form>
+</body>
+</html>
