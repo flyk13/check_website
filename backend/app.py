@@ -3,9 +3,7 @@ import io
 import pandas as pd
 import requests
 from flask import Flask, request, send_file, jsonify, send_from_directory
-# Load environment variables from .env file
-from dotenv import load_dotenv
-load_dotenv()
+
 # Set the port for the Flask app
 # Ensure the .env file is in the same directory as this script or adjust the path accordingly
 PORT = int(os.getenv('PORT', 5000))  # Default to 5000 if not set
