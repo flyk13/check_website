@@ -3,6 +3,8 @@ import io
 import pandas as pd
 import requests
 from flask import Flask, request, send_file, jsonify, send_from_directory
+# Load environment variable PORT
+PORT = os.environ['PORT']  # Default port for Flask
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -154,4 +156,4 @@ def upload_file():
 if __name__ == '__main__':
     # Make sure the app runs on 0.0.0.0 to be accessible externally if needed
     # Use a specific port if desired, default is 5000
-    app.run(host='0.0.0.0', port=10290, debug=True)
+    app.run(host='0.0.0.0', port=PORT, debug=True)
