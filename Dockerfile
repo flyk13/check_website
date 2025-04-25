@@ -1,6 +1,8 @@
 # Use an official Python base image
 FROM python:3.9-slim
 
+ENV PORT=8080
+
 # Set an appropriate working directory
 WORKDIR /app
 
